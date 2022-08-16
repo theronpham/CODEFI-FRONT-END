@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Basic exercise-->
+    <h1> Life is so simple!!! </h1>
+
+
+    <!--Advance exercise-->
+    <h2>But just before I start learning code =.=</h2>
+    <div class="jumpbotron">
+        <button class="btn">Click here to change text color</button>
+    </div>
+
+    <script>
+        //Basic exercise
+        const h1color = document.querySelector('h1');
+        h1color.style.color = "green";
+
+        //Advance exercise
+        const btn = document.querySelector('.btn');
+        const h2 = document.querySelector('h2');
+        function changeTextColorWithBtn() {
+            h2.style.color = "blue";
+        }
+        btn.addEventListener('click', changeTextColorWithBtn);
+    </script>
+</body>
+</html>
