@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop through the objects</title>
+</head>
+<body>
+    <ul id="food-menu">
+        
+    </ul>
+    <script>
+        //Intermediate Exercise: Dynamically display a list of food items and prices using HTML & JavaScript
+        //Create a list of object, each object having a name and price property
+        const foodList = [
+            {name: 'spring roll', price: 3.50},
+            {name: 'banh trang tron', price: 2.75},
+            {name: 'pho', price: 7.45},
+            {name: 'bun cha ca', price: 8.75},
+            {name: 'xoi xeo', price: 5.75},
+            {name: 'banh mi', price: 5.50}
+        ];
+        //loop over that list, dynamically create a new list item <li></li> with the food name inside, and append that item to an existing HTML <ul></ul> element
+        for (item of foodList) {
+            const li = document.createElement('li');     //create li element
+
+            li.innerText = item.name + " : $" + item.price;   //add food name to li element as text
+
+            document.querySelector('#food-menu').appendChild(li); //append li to ul element 
+        }
+    </script>
+    
+</body>
+</html>
